@@ -21,7 +21,7 @@ trun = d/v =  100/(100/15) = 15 seconds
 tswim = d/v = 100/(100/75) = 75 seconds
 ttotal = 15+75 = 90 seconds
 
-
-
+What if we just swim?
+tswim = d/v = 100 sqrt(2)/(100/75) = 75 sqrt(2) = 106.1 seconds
 
 */
