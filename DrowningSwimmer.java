@@ -16,6 +16,11 @@ to the victim?
  
 /*
 
+What if we run 100 meters, then swim 100 meters?
+trun = d/v =  100/(100/15) = 15 seconds
+tswim = d/v = 100/(100/75) = 75 seconds
+ttotal = 15+75 = 90 seconds
+
 
 
 
