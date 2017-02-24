@@ -24,4 +24,8 @@ ttotal = 15+75 = 90 seconds
 What if we just swim?
 tswim = d/v = 100 sqrt(2)/(100/75) = 75 sqrt(2) = 106.1 seconds
 
+Run (100-x), then swim.
+trun = d/v = (100-x)/(100/15) = 15 - (15x/100)
+tswim = d/v = sqrt(100^2 + x^2)/(100/75) = (75/100)sqrt(100^2 +x^2)
+
 */
