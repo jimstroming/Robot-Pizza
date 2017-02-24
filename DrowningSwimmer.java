@@ -28,4 +28,18 @@ Run (100-x), then swim.
 trun = d/v = (100-x)/(100/15) = 15 - (15x/100)
 tswim = d/v = sqrt(100^2 + x^2)/(100/75) = (75/100)sqrt(100^2 +x^2)
 
+ttotal = 15 - (15x/100) + (75/100)sqrt(100^2+x^2)
+
+To find the minimum, lets set the derivative to zero.
+
+0 = -15/100 + (75/100)(1/2)(2x)(x^2+100^2)^(-1/2)
+7500x = 15 sqrt(x^2 + 100^2)
+500x = sqrt(x^2 + 100^2)
+x^2 + 100^2 = (500)^2(x^2)
+x^2 = 1/25
+x = 1/5
+
+
+
+
 */
