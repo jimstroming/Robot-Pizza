@@ -19,6 +19,16 @@ public final class BirthdayCake {
         numberblows = 0;
     }
     
-
+    public int blowcandles(int numbercandlesblown){
+        if (numberblows > 0) {
+            numbercandles -= numbercandlesblown;
+            numberblows += 1;
+        }
+        return numbercandles;
+    }
+    
+    public int getnumberblows(){
+        return numberblows;
+    }
 
 }
