@@ -44,9 +44,30 @@ x = 1/5
 
 /* Let's try validating with a java simulation */
 
+import java.lang.Math;
+
+
 public final class DrowningSwimmer {
 
-    public float calculateTime(float walkingdistance){
+    private final double swimmingspeed;
+    private final double runningspeed;
+    private final double swimmingdistance;
+    private final double runningdistance;
+    
+    public DrowningSwimmer(double swimspeed, double runspeed, double swimdist, double rundist) {
+        swimmingspeed = swimspeed;
+        runningspeed = runspeed;
+        swimmingdistance = swimdist;
+        runningdistance = rundist;
+    }
+    
+    public double calculatehypotenuse(double x, double y){
+        return 1;
+    
+    
+    }
+
+    public double calculateTime(double walkingdistance){
         return 1;
     
     }
