@@ -75,6 +75,21 @@ public final class DrowningSwimmer {
         double swimmingtime = calctraveltime(swimmingdistance, swimmingspeed);
         return walkingtime+swimmingtime;
     }
+    
+    public double calcoptimalrescuedistance(double increment){
+        double x = 0;
+        double mindistance = 0;
+        double mintime = calcrescuetime(0);
+        while (x < landdistance) {
+            double currenttime = calcrescuetime(x);
+            if (currenttime < mintime) {
+                mintime = currenttime;
+                mindistance = x;
+            }    
+            x += increment;
+        }
+        return mindistance;
+    }
 
     public static void main(String[] args){
         DrowningSwimmer Swimmer = new DrowningSwimmer(100.0/75.0,100.0/15.0,100,100);
