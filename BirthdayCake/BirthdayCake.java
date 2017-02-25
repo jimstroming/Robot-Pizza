@@ -37,5 +37,10 @@ public final class BirthdayCake {
     public int getnumberblows(){
         return numberblows;
     }
+    
+    public void blowrandomcandles(){
+        int randomnumbercandles =  1;
+        blowcandles(randomnumbercandles);
+    }
 
 }
