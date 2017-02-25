@@ -63,11 +63,13 @@ public final class DrowningSwimmer {
     
     public double calchypotenuse(double x, double y){
         return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    }
     
-    
+    public double calcTravelTime(double distance, double speed){
+        return distance/speed;
     }
 
-    public double calcTime(double walkingdistance){
+    public double calcTotalTime(double walkingdistance){
         return 1;
     
     }
