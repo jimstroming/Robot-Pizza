@@ -6,3 +6,19 @@ that remain, including one and that other number. How many times do you blow
 before all the candles are extinguished, on average?
 
 */
+
+
+
+public final class BirthdayCake {
+
+    private int numbercandles;
+    private int numberblows;
+    
+    public BirthdayCake(int candlesoncake){
+        numbercandles = candlesoncake;
+        numberblows = 0;
+    }
+    
+
+
+}
