@@ -61,13 +61,13 @@ public final class DrowningSwimmer {
         runningdistance = rundist;
     }
     
-    public double calculatehypotenuse(double x, double y){
-        return 1;
+    public double calchypotenuse(double x, double y){
+        return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
     
     
     }
 
-    public double calculateTime(double walkingdistance){
+    public double calcTime(double walkingdistance){
         return 1;
     
     }
