@@ -40,6 +40,15 @@ x^2 = 1/25
 x = 1/5
 
 
-
-
 */
+
+/* Let's try validating with a java simulation */
+
+public final class DrowningSwimmer {
+
+    public float calculateTime(float walkingdistance){
+        return 1;
+    
+    }
+
+}
