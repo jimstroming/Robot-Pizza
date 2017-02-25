@@ -31,6 +31,7 @@ public final class BirthdayCake {
     
     public void lightcake(){
         numbercandles = maxcandles;
+        numberblows = 0;
     }
     
     public int getnumberblows(){
