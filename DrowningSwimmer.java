@@ -76,4 +76,12 @@ public final class DrowningSwimmer {
         return walkingtime+swimmingtime;
     }
 
+    public static void main(String[] args){
+        DrowningSwimmer Swimmer = new DrowningSwimmer(100.0/75.0,100.0/15.0,100,100);
+        
+        System.out.println(Swimmer.calcrescuetime(12));
+        System.out.println(Swimmer.calcrescuetime(1));
+        System.out.println(Swimmer.calcrescuetime(99));
+
+    }
 }
