@@ -11,10 +11,12 @@ before all the candles are extinguished, on average?
 
 public final class BirthdayCake {
 
+    private int maxcandles;
     private int numbercandles;
     private int numberblows;
     
     public BirthdayCake(int candlesoncake){
+        maxcandles = candlesoncake;
         numbercandles = candlesoncake;
         numberblows = 0;
     }
@@ -25,6 +27,10 @@ public final class BirthdayCake {
             numberblows += 1;
         }
         return numbercandles;
+    }
+    
+    public void lightcake(){
+        numbercandles = maxcandles;
     }
     
     public int getnumberblows(){
