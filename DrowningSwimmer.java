@@ -97,6 +97,10 @@ public final class DrowningSwimmer {
         System.out.println(Swimmer.calcrescuetime(12));
         System.out.println(Swimmer.calcrescuetime(1));
         System.out.println(Swimmer.calcrescuetime(99));
+                              
+        double optimaldistance = Swimmer.calcoptimalrescuedistance(0.01);
+        System.out.println(optimaldistance);
+        System.out.println(Swimmer.calcrescuetime(optimaldistance));
 
     }
 }
