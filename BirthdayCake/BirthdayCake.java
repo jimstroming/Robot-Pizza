@@ -42,5 +42,13 @@ public final class BirthdayCake {
         int randomnumbercandles =  1;
         blowcandles(randomnumbercandles);
     }
+    
+    public int blowoutcake(){
+        lightcake();
+        while (numbercandles > 0){
+            blowrandomcandles();
+        }
+        return numberblows;
+    }
 
 }
