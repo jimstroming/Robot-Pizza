@@ -11,7 +11,7 @@ before all the candles are extinguished, on average?
 
 public final class BirthdayCake {
 
-    private int maxcandles;
+    private final int maxcandles;
     private int numbercandles;
     private int numberblows;
     
@@ -22,10 +22,9 @@ public final class BirthdayCake {
     }
     
     public int blowcandles(int numbercandlesblown){
-        if (numberblows > 0) {
-            numbercandles -= numbercandlesblown;
-            numberblows += 1;
-        }
+        numbercandles -= numbercandlesblown;
+        numberblows += 1;
+        System.out.println(numbercandles);
         return numbercandles;
     }
     
@@ -49,6 +48,11 @@ public final class BirthdayCake {
             blowrandomcandles();
         }
         return numberblows;
+    }
+    
+    public static void main(String[] args){
+        BirthdayCake cake = new BirthdayCake(30);
+        System.out.println(cake.blowoutcake());
     }
 
 }
