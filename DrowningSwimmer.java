@@ -104,3 +104,17 @@ public final class DrowningSwimmer {
 
     }
 }
+
+/*  
+
+Which outputs 
+
+101.70495483208028
+105.68701957133337
+89.85374990625469
+79.59000000000381
+88.48469230405912
+
+So, we should run 79.6 meters, which gives us an 88.5 second rescue
+
+/*
