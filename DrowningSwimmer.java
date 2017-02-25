@@ -51,27 +51,29 @@ public final class DrowningSwimmer {
 
     private final double swimmingspeed;
     private final double runningspeed;
-    private final double swimmingdistance;
-    private final double runningdistance;
+    private final double waterdistance;
+    private final double landdistance;
     
-    public DrowningSwimmer(double swimspeed, double runspeed, double swimdist, double rundist) {
+    public DrowningSwimmer(double swimspeed, double runspeed, double waterdist, double landdist) {
         swimmingspeed = swimspeed;
         runningspeed = runspeed;
-        swimmingdistance = swimdist;
-        runningdistance = rundist;
+        waterdistance = waterdist;
+        landdistance = landdist;
     }
     
     public double calchypotenuse(double x, double y){
         return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
     }
     
-    public double calcTravelTime(double distance, double speed){
+    public double calctraveltime(double distance, double speed){
         return distance/speed;
     }
 
-    public double calcTotalTime(double walkingdistance){
-        return 1;
-    
+    public double calcrescuetime(double walkingdistance){
+        double walkingtime = calctraveltime(walkingdistance, runningspeed);
+        double swimmingdistance = calchypotenuse(waterdistance, landdistance-walkingdistance);
+        double swimmingtime = calctraveltime(swimmingdistance, swimmingspeed);
+        return walkingtime+swimmingtime;
     }
 
 }
