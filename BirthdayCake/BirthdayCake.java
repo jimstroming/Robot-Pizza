@@ -7,7 +7,8 @@ before all the candles are extinguished, on average?
 
 */
 
-
+import java.lang.Math;
+import java.util.Random;
 
 public final class BirthdayCake {
 
@@ -38,7 +39,8 @@ public final class BirthdayCake {
     }
     
     public void blowrandomcandles(){
-        int randomnumbercandles =  1;
+        Random rand = new Random();
+        int randomnumbercandles =  rand.nextInt(numbercandles)+1;
         blowcandles(randomnumbercandles);
     }
     
