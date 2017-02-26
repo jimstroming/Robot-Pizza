@@ -13,8 +13,8 @@ import java.util.Random;
 public final class BirthdayCake {
 
     private final int maxcandles;
-    private int numbercandles;
-    private int numberblows;
+    private int numbercandles;   // two thread safe variables we need to protect
+    private int numberblows;     // they are not independent
     
     public BirthdayCake(int candlesoncake){
         maxcandles = candlesoncake;
