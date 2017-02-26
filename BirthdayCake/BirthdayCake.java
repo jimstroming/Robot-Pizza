@@ -22,7 +22,7 @@ public final class BirthdayCake {
         numberblows = 0;
     }
     
-    public int blowcandles(int numbercandlesblown){
+    public synchronized int blowcandles(int numbercandlesblown){
         numbercandles -= numbercandlesblown; // potential race
         numberblows += 1;  // need the decrement in number of candles
                            // to be atomic with the increment in numberblows
@@ -30,7 +30,7 @@ public final class BirthdayCake {
         return numbercandles;
     }
     
-    public void lightcake(){
+    public synchronized void lightcake(){
         numbercandles = maxcandles;  // potential race
         numberblows = 0;    // need the resetting of number of candles to be
                             // atomic with the resetting of numberofblows
@@ -39,7 +39,7 @@ public final class BirthdayCake {
     // also, can't have one thread lighting the cake while another thread
     // is blowing the candles.
     
-    public int getnumberblows(){
+    public synchronized int getnumberblows(){
         return numberblows;
     }
     
