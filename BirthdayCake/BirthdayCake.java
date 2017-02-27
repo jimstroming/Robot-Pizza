@@ -55,12 +55,9 @@ public final class BirthdayCake {
         lightcake();
         while (true){      // potential races.
             synchronized(this){
-                if (numbercandles == 0) break;
+                if (numbercandles == 0) return numberblows;
                 blowrandomcandles();        // numbercandles could change before we 
             }                            // call blowrandomcandles
-        }
-        synchronized(this){    // synchronized because reading numberblows
-            return numberblows;
         }
     }
     
