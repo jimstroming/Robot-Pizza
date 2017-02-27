@@ -60,7 +60,7 @@ public final class BirthdayCake {
     }
     
     public static void main(String[] args){
-        BirthdayCake cake = new BirthdayCake(300000);
+        BirthdayCake cake = new BirthdayCake(30);
         System.out.println(cake.threadunsafe_blowoutcake());
     }
 
