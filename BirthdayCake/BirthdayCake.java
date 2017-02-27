@@ -51,19 +51,17 @@ public final class BirthdayCake {
         }
     }
     
-    public int blowoutcake(){
-        lightcake();
-        while (true){      // potential races.
-            synchronized(this){
-                if (numbercandles == 0) return numberblows;
-                blowrandomcandles();        // numbercandles could change before we 
-            }                            // call blowrandomcandles
-        }
+    public int threadunsafe_blowoutcake(){
+        lightcake();     // unsafe because we need a better mechanism
+        while (true){    // to return numberblows if we multithread 
+            if (numbercandles == 0) return numberblows;
+            blowrandomcandles();        // numbercandles could change before we 
+        }                               // call blowrandomcandles
     }
     
     public static void main(String[] args){
         BirthdayCake cake = new BirthdayCake(300000);
-        System.out.println(cake.blowoutcake());
+        System.out.println(cake.threadunsafe_blowoutcake());
     }
 
 }
