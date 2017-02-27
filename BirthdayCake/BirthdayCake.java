@@ -40,14 +40,15 @@ public final class BirthdayCake {
     // is blowing the candles.
     
     public synchronized int getnumberblows(){
-        return numberblows;
+        return numberblows;     // synchronized because reading numberblows
     }
     
     public void blowrandomcandles(){
         Random rand = new Random();
-        int randomnumbercandles =  rand.nextInt(numbercandles)+1;
-        blowcandles(randomnumbercandles);  // as long as blowcandles is locked,
-                                           // we will be good.
+        synchronized(this){     // need to lock because we are reading numbercandles
+            int randomnumbercandles =  rand.nextInt(numbercandles)+1;
+            blowcandles(randomnumbercandles);
+        }
     }
     
     public int blowoutcake(){
@@ -58,7 +59,9 @@ public final class BirthdayCake {
                 blowrandomcandles();        // numbercandles could change before we 
             }                            // call blowrandomcandles
         }
-        return numberblows;
+        synchronized(this){    // synchronized because reading numberblows
+            return numberblows;
+        }
     }
     
     public static void main(String[] args){
