@@ -53,9 +53,10 @@ public final class BirthdayCake {
     public int blowoutcake(){
         lightcake();
         while (true){      // potential races.
-            if (numbercandles == 0) break;
-            blowrandomcandles();        // numbercandles could change before we 
-                                        // call blowrandomcandles
+            synchronized(this){
+                if (numbercandles == 0) break;
+                blowrandomcandles();        // numbercandles could change before we 
+            }                            // call blowrandomcandles
         }
         return numberblows;
     }
